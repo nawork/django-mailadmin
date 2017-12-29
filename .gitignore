@@ -4,3 +4,6 @@
 # exclude python cache
 __pycache__
 
+# emacs
+*~
+
