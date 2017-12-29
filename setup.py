@@ -9,10 +9,10 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-mailadmin',
-    version='1.0.0',
+    version='1.5.0.a',
     packages=find_packages(),
     install_requires=[
-        'django >= 1.10, < 2.0'
+        'django > 1'
     ],
     include_package_data=True,
     license='BSD-3-Clause',

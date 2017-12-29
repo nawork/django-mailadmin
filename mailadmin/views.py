@@ -1,6 +1,6 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.views.generic import TemplateView
 from django.views.generic.list import MultipleObjectMixin
 from django.contrib.auth import login, logout
@@ -64,7 +64,7 @@ class LoginView(BaseView):
         self.template_name = 'Account/login.html'
 
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             return self.redirect_user_to_permitted_view(request.user)
         return BaseView.get(self, request, *args, **kwargs)
 
